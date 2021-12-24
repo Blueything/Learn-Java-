@@ -1,10 +1,10 @@
-
 import java.util.*;
 
 class Main{
   public static void main(String args[])
   {
     int num;
+    boolean flag=false;
     Scanner sc = new Scanner(System.in);
     num = sc.nextInt();
     
@@ -19,13 +19,15 @@ class Main{
           if(num%i==0)
           {
             System.out.println("Not Prime");
+            flag=true;
             break;
           }
-          if(i==(num-2))
-          {
-            System.out.println("Prime");
-          }
+          
         }
+    }
+    if(flag==false)
+    {
+      System.out.println("Prime");
     }
   }
 }
